@@ -31,7 +31,7 @@ Recommended options during the installation process:
 
 Make sure you have a [GitHub](https://github.com) account too, so you can push public changes to our source code.
 
-Replace the example name and email address in the following steps with the ones you used for your Github account.
+Replace the example name and email address in the following steps with the ones you used for your Github account. Enter each command one at a time, skipping any comment lines that being with `#`:
 
 *If you are on Windows, many of the commands in this section likely must be executed through the "Git Bash" interface.*
 
@@ -39,7 +39,7 @@ Replace the example name and email address in the following steps with the ones 
 git config --global color.ui true
 git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR@EMAIL.com"
-# Generate an SSH key:
+# Generate an SSH key, pressing [enter] for all options to use their defaults:
 ssh-keygen -t rsa -C "YOUR@EMAIL.com"
 ```
 
@@ -53,6 +53,12 @@ Once you've done this, you can check and see if it worked:
 
 ```sh
 ssh -T git@github.com
+```
+
+You should get something like:
+
+```
+Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 ## Installing Ruby
