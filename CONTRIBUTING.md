@@ -132,6 +132,10 @@ ruby -v
 
 Unfortunately, Ruby releases on Windows lag behind the other operating systems. Nevertheless, at the time of writing, you can install 2.2.4 through using [RubyInstaller](http://rubyinstaller.org/downloads/). Be sure to download the x64 version if you're on a 64-bit system (you most likely are).
 
+Recommended options during the installation process:
+
+* Check "Add Ruby executables to your PATH" to allow access to the Ruby programs through the command line.
+
 ## Installing Bundler
 
 [Bundler](http://bundler.io/) is the standard package management system for Ruby. We use it to manage our Ruby dependencies such as Jekyll. Once Ruby is installed, installing Bundler is very simple:
@@ -145,6 +149,8 @@ Depending on your system's configuration, you may have to include `sudo` before 
 ## Fork this repository
 
 We follow the "pull requests" flow, which involves maintaining a personal "forked" repository and asking the maintainers of the main code repository to accept your changes one-by-one. Refer to the official ["Fork A Repo"](https://help.github.com/articles/fork-a-repo/) GitHub guide for more information on this flow.
+
+Before proceeding, ensure that you've forked this repository to your own personal GitHub account by clicking the "Fork" button at this repository's root page.
 
 ## Download your forked repository
 
@@ -204,7 +210,3 @@ git commit -m "Make header font larger"
 # Push the commit to your forked repository on the "master" branch
 git push origin master
 ```
-
-## Open a pull request for your changes
-
-[Initiate a pull request](https://help.github.com/articles/using-pull-requests/) through the GitHub interface and wait for feedback and acceptance!
