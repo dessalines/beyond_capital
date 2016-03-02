@@ -33,6 +33,8 @@ Make sure you have a [GitHub](https://github.com) account too, so you can push p
 
 Replace the example name and email address in the following steps with the ones you used for your Github account.
 
+*If you are on Windows, many of the commands in this section likely must be executed through the "Git Bash" interface.*
+
 ```sh
 git config --global color.ui true
 git config --global user.name "YOUR NAME"
