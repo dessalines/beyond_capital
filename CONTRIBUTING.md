@@ -16,7 +16,18 @@ If you're reading this through GitHub, you've probably realized that we use [Git
 
 If you are using OS X or Linux, your system may already have Git installed. Git is supported by all major systems (including Windows) and can be downloaded from the [official site](https://git-scm.com/).
 
+### Windows
+
 If you are on Windows, the Git installer will also install some dependencies that simulate a Unix environment that your OS X and Linux comrades already have. For instance, Git installs OpenSSH for generating SSH keys through `ssh-keygen`, which is utilized below.
+
+Recommended options during the installation process:
+
+* Select "Use Git from the Windows Command Prompt," which will allow you to use `git` and some of its related tools directly from the familiar command line. Some tools, such as `ssh-keygen`, will only be accessible through the "Git Bash" interface.
+* Uncheck "Windows Explorer integration" to avoid cluttering your right-click menu in Explorer windows.
+* Leave "Checkout as-is, commit Unix-style line endings" selected.
+* Leave all other options as default.
+
+## Configuring Git
 
 Make sure you have a [GitHub](https://github.com) account too, so you can push public changes to our source code.
 
@@ -26,6 +37,7 @@ Replace the example name and email address in the following steps with the ones 
 git config --global color.ui true
 git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR@EMAIL.com"
+# Generate an SSH key:
 ssh-keygen -t rsa -C "YOUR@EMAIL.com"
 ```
 
@@ -122,12 +134,16 @@ gem install bundler
 
 Depending on your system's configuration, you may have to include `sudo` before that command.
 
-## Download this repository
+## Fork this repository
+
+We follow the "pull requests" flow, which involves maintaining a personal "forked" repository and asking the maintainers of the main code repository to accept your changes one-by-one. Refer to the official ["Fork A Repo"](https://help.github.com/articles/fork-a-repo/) GitHub guide for more information on this flow.
+
+## Download your forked repository
 
 Finally, you're ready to download a local copy of the codebase.
 
 ```sh
-git clone https://github.com/cdagitprop/beyond-capital
+git clone https://github.com/YOUR-USERNAME/beyond-capital
 cd beyond-capital
 ```
 
@@ -168,20 +184,19 @@ Navigate to `http://127.0.0.1:4000/beyond-capital/` in your web browser. Once yo
 
 ## Commit your changes
 
-Git is a very complicated tool, but you can utilize the following work flow for the majority of your work.
+Git is an unfortunately complicated tool, but you can utilize the following work flow for the majority of your work.
 
 ```sh
 # Register all new changes to the code
 git add -A
+
 # Bundle up the changes with a short commit message
 git commit -m "Make header font larger"
-```
 
-If you have appropriate access to this repository on GitHub, you can push changes directly to the `master` branch.
-
-```sh
-# Push the commit to the live repository
+# Push the commit to your forked repository on the "master" branch
 git push origin master
 ```
 
-If you do not have direct access to the repository, you'll need to follow the ["pull request" flow](https://help.github.com/articles/using-pull-requests/), which involves maintaining a personal "forked" repository and asking the maintainers of the master code repository to accept your changes one-by-one.
+## Open a pull request for your changes
+
+[Initiate a pull request](https://help.github.com/articles/using-pull-requests/) through the GitHub interface and wait for feedback and acceptance!
