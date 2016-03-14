@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/article.css" | prepend: site.baseurl }}">
+  </head>
+  <body>
+    {% include header.html %}
+    <main>
+    {% if page.title or page.quote %}
+    <div class="page-header">
+      {%if page.title%}
+      <span class="page-title">
+      {{page.title | escape}}
+      </span>
+      {%endif%}
+      {%if page.quote%}
+      <span class="page-quote">
+      {{page.quote | prepend:'"' | append: '"'}}
+      </span>
+      {%if page.quoteauthor%}
+      <span class="page-quoteauthor">
+      {{page.quoteauthor | escape | strip | prepend: ' - '}}{%if page.quotesrc%}, {%if page.quoteurl%}<a href={{page.quoteurl}} | prepend: '"' | append: '"'>{%endif%}{{page.quotesrc}}{%if page.quoteurl%}</a>{%endif%}{%endif%}
+      </span>
+      {%endif%}
+      {%endif%}
+    </div>
+    {%endif%}
+    <div class="page-body">
+    <div class="container">
+    <div class="row">
+    <div class="page-sources">
+    {{ content | split: '<div class="footnotes">' | last | prepend: '<div class="footnotes">' | replace: '<li', '<li class="listfootnote" ' | remove: '<p>' | remove: '</p>'}}
+    </div>
+    <div class="page-content"> 
+    {{ content | split: '<div class="footnotes">' | first}}
+    </div>
+    </div>
+    </div>
+    </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
