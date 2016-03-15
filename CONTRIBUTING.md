@@ -29,7 +29,7 @@ Recommended options during the installation process:
 
 ## Configuring Git
 
-Make sure you have a [GitHub](https://github.com) account too, so you can push public changes to our source code.
+Make sure you have a [GitLab](http://gitlab.cdap.cf) account too, so you can push public changes to our source code.
 
 Replace the example name and email address in the following steps with the ones you used for your Github account. Enter each command one at a time, skipping any comment lines that being with `#`:
 
@@ -43,7 +43,7 @@ git config --global user.email "YOUR@EMAIL.com"
 ssh-keygen -t rsa -C "YOUR@EMAIL.com"
 ```
 
-The next step is to take the newly generated SSH key and add it to your Github account. You want to copy and paste the output of the following command and [paste it here](https://github.com/settings/ssh).
+The next step is to take the newly generated SSH key and add it to your Github account. You want to copy and paste the output of the following command and [paste it here](http://gitlab.cdap.cf/profile/keys).
 
 ```sh
 cat ~/.ssh/id_rsa.pub
@@ -52,7 +52,7 @@ cat ~/.ssh/id_rsa.pub
 Once you've done this, you can check and see if it worked:
 
 ```sh
-ssh -T git@github.com
+ssh -T git@gitlab.cdaf.cf
 ```
 
 You should get something like:
@@ -101,31 +101,16 @@ ruby -v
 
 This section is particularly geared for Ubuntu, but these steps should be reproducible on any Linux distribution with some effort.
 
-The first step is to install some dependencies for Ruby.
+This uses [RVM](https://rvm.io/rvm/install) to install ruby and setup its dependencies.
 
+First add the gpg keys for RVM. 
 ```sh
-sudo apt-get update
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 ```
 
-Installing with `rbenv` is a simple two step process. First you install `rbenv`, and then `ruby-build`:
-
+Then install RVM with a stable ruby:
 ```sh
-cd
-git clone git://github.com/sstephenson/rbenv.git .rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-exec $SHELL
-
-git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-exec $SHELL
-
-git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
-
-rbenv install 2.3
-rbenv global 2.3
-ruby -v
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 
 ### Windows
@@ -157,7 +142,7 @@ Before proceeding, ensure that you've forked this repository to your own persona
 Finally, you're ready to download a local copy of the codebase.
 
 ```sh
-git clone https://github.com/YOUR-USERNAME/beyond-capital
+git clone http://gitlab.cdaf.cf/YOUR-USERNAME/beyond-capital
 cd beyond-capital
 ```
 
