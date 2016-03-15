@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Origins of Global Capitalism
+title: Origins of Capitalism
 <!-- quote: this is a quote <b>you</b> are not prepared for
 quoteauthor: Quote Man
 quotesrc: The Big Book of Quotes, 1899
