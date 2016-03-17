@@ -12,3 +12,4 @@ An informational website exploring capitalism and its future.
 * Contribution tutorial (setting up Ruby, Jekyll, GitHub)
 * Move these to-do items to GitHub issues
 * Resize table of contents icons and/or put them in a sprite sheet
+* Add hook
