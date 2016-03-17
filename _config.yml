@@ -5,7 +5,7 @@
 
 # Site settings
 title: Beyond Capital
-baseurl: "/beyond-capital"
+baseurl: "/"
 url: "http://cdagitprop.github.io"
 
 # Build settings
