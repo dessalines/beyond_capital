@@ -36,14 +36,18 @@
     <div class="page-body">
     <div class="container">
     <div class="row">
-    {% if page.content contains '<div class="footnotes">'%}
-    <div class="page-sources">
-    {{ content | split: '<div class="footnotes">' | last | prepend: '<div class="footnotes">' | replace: '<li', '<li class="listfootnote" ' | remove: '<p>' | remove: '</p>'}}
-    </div>
-    {%endif%}
+    <div class="col-md-9 col-md-push-3 col-xs-12">
     <div class="page-content {% if page.content contains '<div class="footnotes">'%} content-cited {%endif%}"> 
     {{ content | split: '<div class="footnotes">' | first}}
     </div>
+    </div>
+    {% if page.content contains '<div class="footnotes">'%}
+    <div class="col-md-3 col-md-pull-9 col-xs-12">
+    <div class="page-sources">
+    {{ content | split: '<div class="footnotes">' | last | prepend: '<div class="footnotes">' | replace: '<li', '<li class="listfootnote" ' | remove: '<p>' | remove: '</p>'}}
+    </div>
+    </div>
+    {%endif%}
     </div>
     </div>
     </div>
