@@ -7,8 +7,8 @@
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+/*  color: inherit;
+  text-decoration: inherit;*/
 }
 
 body {
@@ -47,6 +47,8 @@ em {
       border: 2px solid $salmon;
       padding: 5px 20px;
       transition: all 0.3s;
+      color: inherit;
+      text-decoration: inherit;
 
       &:hover {
         background-color: $salmon;
@@ -105,6 +107,11 @@ em {
   padding-top: 30px;
   text-align: center;
   text-transform: uppercase;
+
+  a { 
+    color: inherit;
+    text-decoration: inherit;
+  }
 }
 
 .footer-title {
