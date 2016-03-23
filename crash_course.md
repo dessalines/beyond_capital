@@ -96,6 +96,6 @@ Socialist films:
 [Reds(1981)](http://www.imdb.com/title/tt0082979/?ref_=fn_al_tt_1), [Salt of the Earth(1954)](http://www.imdb.com/title/tt0047443/?ref_=fn_al_tt_1), [Pride(2014)](http://www.imdb.com/title/tt3169706/?ref_=nv_sr_4), [Snowpiercer(2013)](http://www.imdb.com/title/tt1706620/?ref_=nv_sr_1), [Libertarias(1996)](http://www.imdb.com/title/tt0113649/?ref_=fn_al_tt_1)
 
 [^1]: /u/gab91    
-[^2]: /r/socialism
-[^3]: /r/socialism_101
-[^4]: /r/communism101 
+[^2]: [/r/socialism](https://reddit.com/r/socialism)
+[^3]: [/r/socialism_101](https://reddit.com/r/socialism_101)
+[^4]: [/r/communism101](https://reddit.com/r/communism101)
