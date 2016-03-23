@@ -41,6 +41,7 @@ em {
   h1 {
     display: block;
     float: left;
+    font-size: 15px;
 
     a {
       border: 2px solid $salmon;
@@ -86,13 +87,13 @@ em {
   background-color: $white;
 }
 
-.container {
+/*.container {
   margin-left: auto;
   margin-right: auto;
   max-width: 1030px;
   padding-left: 30px;
   padding-right: 30px;
-}
+}*/
 
 .footer {
   @include font-smoothing;
