@@ -21,6 +21,7 @@ b {
 .page-sources {
   float:left;
   width:25%;
+  text-align: left;
   text-transform: uppercase;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 12px;
@@ -54,6 +55,7 @@ b {
 }
 
 .page-body {
+  text-align: center;
   background: white;
   color: text; 
   display: block; 
@@ -64,10 +66,11 @@ b {
   padding-bottom: 15px;
   overflow: auto;
 }
+
 .page-content {
-  float:left;
+  display: inline-block;
+  text-align: left;
   width:75%;
-  border-left: 2px solid salmon;
   padding-left: 15px;
   padding-right: 15px;
 }

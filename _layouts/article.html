@@ -36,10 +36,12 @@
     <div class="page-body">
     <div class="container">
     <div class="row">
+    {% if page.content contains '<div class="footnotes">'%}
     <div class="page-sources">
     {{ content | split: '<div class="footnotes">' | last | prepend: '<div class="footnotes">' | replace: '<li', '<li class="listfootnote" ' | remove: '<p>' | remove: '</p>'}}
     </div>
-    <div class="page-content"> 
+    {%endif%}
+    <div class="page-content {% if page.content contains '<div class="footnotes">'%} content-cited {%endif%}"> 
     {{ content | split: '<div class="footnotes">' | first}}
     </div>
     </div>
