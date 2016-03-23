@@ -1,0 +1,50 @@
+$white: #fff;
+$salmon: #f55050;
+$text: #3a3838;
+
+$default-line-height: 1.5;
+
+$roboto: "Roboto", sans-serif;
+$roboto-condensed: "Roboto Condensed", sans-serif;
+$lora: "Lora", serif;
+
+$tiny-break: 480px;
+$small-break: 768px;
+$medium-break: 992px;
+$large-break: 1200px;
+
+@mixin clear-fix {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    font-smoothing: subpixel-antialiased;
+  }
+}
+
+@mixin header-text {
+  font-family: $roboto;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@mixin link($border-width: 1px) {
+  border-bottom: $border-width solid transparent;
+  transition: all 0.15s;
+
+  &:hover {
+    border-bottom-color: inherit;
+  }
+}
