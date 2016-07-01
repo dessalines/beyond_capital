@@ -123,6 +123,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 85)
+  jekyll (~> 3.1)
   json
 
 BUNDLED WITH

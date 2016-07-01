@@ -1,23 +1,60 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
+<header class="section-header">
+  <div class="container">
+    <h1>Our system does not work</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Praesent molestie hendrerit nulla cursus viverra</strong>. Duis in dapibus leo. Integer quis risus cursus, ullamcorper nisl sed, ultrices eros. Quisque id nisl nec dolor imperdiet efficitur vitae ac massa. Suspendisse egestas elit nec ornare semper. Etiam eget lorem a mauris hendrerit gravida.</p>
+    <p>Aliquam consequat faucibus diam id fermentum. Sed tortor lacus, congue
+      gravida leo pharetra, semper luctus elit. In hac <strong>habitasse platea</strong> dictumst. Duis at viverra dolor. In placerat viverra velit, ac gravida dui bibendum interdum. Suspendisse et pellentesque tortor. Praesent facilisis nisl porta ligula sodales efficitur. Ut malesuada elementum porttitor. Proin cursus porttitor viverra. In ut convallis eros, et rutrum erat.</p>
+  </div>
+</header>
+<section class="section">
+  <ul class="container">
+    <li class="toc-item">
+      <img src="{{ "images/origins.png" | prepend: site.baseurl }}">
+      <p class="toc-title"><a href="origins_of_capitalism.html">Origins of capitalism</a></p>
+      <p>Aliquam consequat faucibus diam id fermentum. Sed tortor lacus, congue gravida leo pharetra, semper luctus elit. In hac habitasse platea dictumst.</p>
+    </li>
+    <li class="toc-item">
+      <img src="{{ "images/globe.png" | prepend: site.baseurl }}">
+      <p class="toc-title"><a href="capitalisms_global_history.html">Capitalism’s global history</a></p>
+      <p>Aliquam consequat faucibus diam id fermentum. Sed tortor lacus, congue gravida leo pharetra, semper luctus elit. In hac habitasse platea dictumst.</p>
+    </li>
+    <li class="toc-item">
+      <img src="{{ "images/book.png" | prepend: site.baseurl }}">
+      <p class="toc-title"><a href="#">Black book of capital</a></p>
+      <p>Aliquam consequat faucibus diam id fermentum. Sed tortor lacus, congue gravida leo pharetra, semper luctus elit. In hac habitasse platea dictumst.</p>
+    </li>
+    <li class="toc-item">
+      <img src="{{ "images/critique.png" | prepend: site.baseurl }}">
+      <p class="toc-title"><a href="critique_of_capitalism.html">Capital: a critique</a></p>
+      <p>Aliquam consequat faucibus diam id fermentum. Sed tortor lacus, congue gravida leo pharetra, semper luctus elit. In hac habitasse platea dictumst.</p>
+    </li>
+    <li class="toc-item">
+      <img src="{{ "images/decentralize.png" | prepend: site.baseurl }}">
+      <p class="toc-title"><a href="#">Going beyond capital</a></p>
+      <p>Aliquam consequat faucibus diam id fermentum. Sed tortor lacus, congue gravida leo pharetra, semper luctus elit. In hac habitasse platea dictumst.</p>
+    </li>
+    <li class="toc-item">
+      <img src="{{ "images/workers.png" | prepend: site.baseurl }}">
+      <p class="toc-title"><a href="#">Global labor movements</a></p>
+      <p>Aliquam consequat faucibus diam id fermentum. Sed tortor lacus, congue gravida leo pharetra, semper luctus elit. In hac habitasse platea dictumst.</p>
+    </li>
+    <li class="toc-item">
+      <img src="{{ "images/fist.png" | prepend: site.baseurl }}">
+      <p class="toc-title"><a href="#">Past revolutions</a></p>
+      <p>Aliquam consequat faucibus diam id fermentum. Sed tortor lacus, congue gravida leo pharetra, semper luctus elit. In hac habitasse platea dictumst.</p>
+    </li>
+    <li class="toc-item">
+      <img src="{{ "images/state.png" | prepend: site.baseurl }}">
+      <p class="toc-title"><a href="private_and_state_capitalism.html">Private &amp; state capitalism</a></p>
+      <p>Aliquam consequat faucibus diam id fermentum. Sed tortor lacus, congue gravida leo pharetra, semper luctus elit. In hac habitasse platea dictumst.</p>
+    </li>
+    <li class="toc-item">
+      <img src="{{ "images/book.png" | prepend: site.baseurl }}">
+      <p class="toc-title"><a href="crash_course.html">Crash Course</a></p>
+      <p>Aliquam consequat faucibus diam id fermentum. Sed tortor lacus, congue gravida leo pharetra, semper luctus elit. In hac habitasse platea dictumst.</p>
+    </li>
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+</section>
